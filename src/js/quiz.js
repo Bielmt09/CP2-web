@@ -4,7 +4,7 @@ alert("Saibam mais sobre o Quiz")
 
 const perguntas= [
  {
-    pergunta:"Qual é a principal uva utilizada na produção do vinho tinto Malbec?\n Opcao A) ACabernet Sauvignon  \n Opcao B) B Malbec \n Opcao C) C Merlot\n",
+    pergunta:"Qual é a principal uva utilizada na produção do vinho tinto Malbec?\n Opcao A) A Cabernet Sauvignon  \n Opcao B) B Malbec \n Opcao C) C Merlot\n",
     resposta:"B"
  },
  {

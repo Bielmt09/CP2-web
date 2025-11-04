@@ -1,4 +1,4 @@
-/* Reset e variáveis */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,48 +6,47 @@
 }
 
 :root {
-    --cor-primaria: #6d1e4a;
-    --cor-secundaria: #8b2f5a;
-    --cor-destaque: #c49a6c;
-    --cor-texto: #2c1810;
-    --cor-texto-claro: #f5f5f5;
-    --cor-fundo: #faf8f5;
+    --cor-primaria: #165839;
+    --cor-secundaria: #2d8659;
+    --cor-texto: #333;
+    --cor-clara: #f4f1e8;
+    --cor-destaque: #8b0000;
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background: linear-gradient(135deg, var(--cor-fundo) 0%, #f0ebe5 100%);
+    font-family: 'Georgia', serif;
+    background-color: var(--cor-clara);
     color: var(--cor-texto);
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: background 0.5s ease;
 }
 
-/* Header e Navegação */
+/* HEADER E NAVEGAÇÃO */
 header {
-    background: linear-gradient(to bottom, rgba(109, 30, 74, 0.95), rgba(139, 47, 90, 0.98));
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 nav {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1.2rem 2rem;
+    padding: 0 20px;
 }
 
 .logo {
-    color: var(--cor-destaque);
+    color: white;
     font-size: 1.8rem;
     font-weight: bold;
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Palatino', serif;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -56,161 +55,487 @@ nav ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    padding: 15px 0;
+    gap: 10px;
 }
 
 nav ul li {
-    position: relative;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: var(--cor-texto-claro);
+    color: white;
     text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    display: block;
     font-size: 1rem;
     font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+    padding: 8px 16px;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    letter-spacing: 0.5px;
 }
 
 nav ul li a:hover {
-    background: rgba(196, 154, 108, 0.2);
-    color: var(--cor-destaque);
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: var(--cor-destaque);
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 70%;
-}
-
-/* Botões de troca de cor */
+/* BOTÕES DE COR */
 nav ul div {
     display: flex;
-    gap: 0.5rem;
-    margin-left: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid rgba(196, 154, 108, 0.3);
+    gap: 8px;
+    margin-left: 20px;
 }
 
 .botao {
-    width: 35px;
-    height: 35px;
-    border: 3px solid var(--cor-texto-claro);
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    border: 3px solid white;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .botao:hover {
     transform: scale(1.15);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .botao:nth-child(1) {
-    background: #165839;
+    background-color: #165839;
 }
 
 .botao:nth-child(2) {
-    background: #008954;
+    background-color: #008954;
 }
 
 .botao:nth-child(3) {
-    background: #1a6785;
+    background-color: #1e6785;
 }
 
-/* Main */
+/* MAIN CONTENT */
 main {
     flex: 1;
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
     width: 100%;
 }
 
-/* Footer */
-footer {
-    background: linear-gradient(to top, rgba(44, 24, 16, 0.95), rgba(109, 30, 74, 0.9));
-    color: var(--cor-texto-claro);
-    padding: 2rem;
-    margin-top: auto;
+main div {
+    text-align: center;
+    padding: 20px;
 }
 
-footer div:first-child {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1rem;
+#image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-footer div:first-child a {
+#image:hover {
+    transform: scale(1.02);
+}
+
+/* SEÇÕES DE CONTEÚDO */
+.secao {
+    background: white;
+    padding: 40px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secao h1, .secao h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-family: 'Palatino', serif;
+}
+
+.secao p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* PORTFÓLIO - GRID DE VINHOS */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.vinho-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.vinho-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vinho-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vinho-card h3 {
     color: var(--cor-destaque);
-    text-decoration: none;
-    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+.form-contato textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-contato button {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-footer div:first-child a:hover {
-    color: var(--cor-texto-claro);
-    transform: scale(1.2);
+.form-contato button:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer div:last-child {
+/* QUIZ */
+.quiz-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pergunta {
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcao {
+    background: var(--cor-clara);
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.opcao:hover {
+    background: var(--cor-primaria);
+    color: white;
+    border-color: var(--cor-primaria);
+    transform: translateX(10px);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 30px 20px;
     text-align: center;
-    border-top: 1px solid rgba(196, 154, 108, 0.3);
-    padding-top: 1rem;
+    margin-top: auto;
+}
+
+footer div {
+    margin: 15px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
 }
 
 footer p {
     font-size: 0.9rem;
-    color: var(--cor-destaque);
+    opacity: 0.8;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .logo {
-        font-size: 1.4rem;
-    }
-
     nav ul {
         flex-direction: column;
-        gap: 0.3rem;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
     }
 
     nav ul div {
-        margin-left: 0;
-        padding-left: 0;
-        border-left: none;
-        border-top: 2px solid rgba(196, 154, 108, 0.3);
-        padding-top: 1rem;
-        margin-top: 1rem;
+        margin: 15px 0 0 0;
     }
 
-    nav ul li a {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+    .logo {
+        font-size: 1.5rem;
     }
 
     main {
-        padding: 1rem;
+        padding: 20px 10px;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+
+    .form-contato {
+        padding: 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-/* Animações */
+/* ESTILOS ADICIONAIS PARA PÁGINAS */
+.imagem-destaque img,
+.imagem-sobre img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.diferencial-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.diferencial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.diferencial-card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.chamada {
+    text-align: center;
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 60px 40px !important;
+}
+
+.chamada h2 {
+    color: white !important;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.chamada p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background: white;
+    color: var(--cor-primaria);
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-destaque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: var(--cor-clara);
+}
+
+/* PÁGINA SOBRE */
+.lista-premios {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-premios li {
+    background: var(--cor-clara);
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-destaque);
+    font-size: 1.1rem;
+}
+
+/* PÁGINA PORTFÓLIO */
+.vinho-card .tipo {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.vinho-card .descricao {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.vinho-card .preco {
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.info-compra {
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* PÁGINA CONTATO */
+.form-contato label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+.contato-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-box h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.lista-tour {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.lista-tour li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* PÁGINA QUIZ */
+.pergunta-box {
+    margin-bottom: 30px;
+}
+
+.resultado-vinho {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.resultado-vinho h3 {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.preco-resultado {
+    font-size: 1.8rem;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.resultado-vinho .btn-destaque {
+    margin-top: 20px;
+}
+
+/* ANIMAÇÕES */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -222,14 +547,6 @@ footer p {
     }
 }
 
-header {
-    animation: fadeIn 0.6s ease;
-}
-
 main {
-    animation: fadeIn 0.8s ease 0.2s backwards;
-}
-
-footer {
-    animation: fadeIn 1s ease 0.4s backwards;
+    animation: fadeIn 0.6s ease;
 }

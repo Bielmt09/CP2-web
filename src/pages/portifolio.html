@@ -1,44 +1,107 @@
-<!-- sobre -->
- <!DOCTYPE html>
- <html lang="pt-BR">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Vinharia</title>
-    <link rel="stylesheet" href="./src/css/stilo.css">
- </head>
- <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">HOME</a></li>
-                <li><a href="./sobre.html">SOBRE</a></li>
-                <li><a href="./portifolio.html">PORTIFÓLIO</a></li>
-                <li><a href="./quiz.html">QUIZ</a></li>
-                <li><a href="./contato.html">CONTATO</a></li>
-                <div>
-                    <input type="button" class="botao" onclick="trocar('#165839')">
-                    <input type="button" class="botao" onclick="trocar('#008954')">
-                    <input type="button" class="botao" onclick="trocar('#1h6785')">
-                </div>
-            </ul>
-        </nav>
-    </header>
-    <main>
+<!-- portfolio -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfólio - Vinharia Agnello</title>
+   <link rel="stylesheet" href="../css/stilo.css">
+</head>
+<body>
+   <header>
+       <nav>
+           <div class="logo">Vinharia Agnello</div>
+           <ul>
+               <li><a href="../../index.html">HOME</a></li>
+               <li><a href="./sobre.html">SOBRE</a></li>
+               <li><a href="./portifolio.html">PORTFÓLIO</a></li>
+               <li><a href="./quiz.html">QUIZ</a></li>
+               <li><a href="./contato.html">CONTATO</a></li>
+               <div>
+                   <input type="button" class="botao" onclick="trocar('#165839')">
+                   <input type="button" class="botao" onclick="trocar('#008954')">
+                   <input type="button" class="botao" onclick="trocar('#1e6785')">
+               </div>
+           </ul>
+       </nav>
+   </header>
+   <main>
+       <section class="secao">
+           <h1>Nossos Vinhos</h1>
+           <p>Conheça nossa seleção exclusiva de vinhos artesanais, cuidadosamente elaborados para proporcionar experiências únicas.</p>
+       </section>
 
-    </main>
-    <footer>
-        <div>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
-        <div>
-            <p>copyright.-2025 Gabriel Amparo todos os direitos reservados</p>
-        </div>
-    </footer>
+       <section class="portfolio-grid">
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400" alt="Vinho Agnello Reserva">
+               <h3>Agnello Reserva Cabernet Sauvignon</h3>
+               <p class="tipo">Tinto Seco</p>
+               <p>Safra: 2020 | Teor alcoólico: 13,5%</p>
+               <p class="descricao">Vinho robusto com notas de frutas vermelhas maduras, especiarias e toque de chocolate. Maturado por 12 meses em barricas de carvalho francês.</p>
+               <p class="preco">R$ 189,00</p>
+           </div>
 
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=400" alt="Vinho Agnello Merlot">
+               <h3>Agnello Premium Merlot</h3>
+               <p class="tipo">Tinto Suave</p>
+               <p>Safra: 2021 | Teor alcoólico: 13%</p>
+               <p class="descricao">Elegante e aveludado, com aromas de ameixa, cereja e baunilha. Taninos macios e final prolongado.</p>
+               <p class="preco">R$ 165,00</p>
+           </div>
 
-    <script src="./src/js/srcipt.js"></script>
- </body>
- </html>
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400" alt="Vinho Branco Agnello">
+               <h3>Agnello Chardonnay</h3>
+               <p class="tipo">Branco Seco</p>
+               <p>Safra: 2022 | Teor alcoólico: 12,5%</p>
+               <p class="descricao">Fresco e mineral, com notas cítricas, abacaxi e toque amanteigado. Fermentado parcialmente em barricas.</p>
+               <p class="preco">R$ 145,00</p>
+           </div>
+
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=400" alt="Vinho Rosé Agnello">
+               <h3>Agnello Rosé</h3>
+               <p class="tipo">Rosé Seco</p>
+               <p>Safra: 2023 | Teor alcoólico: 11,5%</p>
+               <p class="descricao">Delicado e refrescante, com aromas de morango, melancia e flores brancas. Perfeito para dias quentes.</p>
+               <p class="preco">R$ 125,00</p>
+           </div>
+
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=400" alt="Vinho Agnello Gran Reserva">
+               <h3>Agnello Gran Reserva</h3>
+               <p class="tipo">Tinto Premium</p>
+               <p>Safra: 2018 | Teor alcoólico: 14%</p>
+               <p class="descricao">Corte excepcional de Cabernet Sauvignon, Merlot e Tannat. Complexo, com 24 meses em barrica. Edição limitada.</p>
+               <p class="preco">R$ 320,00</p>
+           </div>
+
+           <div class="vinho-card">
+               <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=400" alt="Vinho Espumante Agnello">
+               <h3>Agnello Brut Nature</h3>
+               <p class="tipo">Espumante</p>
+               <p>Safra: 2021 | Teor alcoólico: 12%</p>
+               <p class="descricao">Espumante elaborado pelo método tradicional. Finas bolhas, notas de maçã verde e pão tostado.</p>
+               <p class="preco">R$ 198,00</p>
+           </div>
+       </section>
+
+       <section class="secao info-compra">
+           <h2>Como Adquirir</h2>
+           <p>Nossos vinhos estão disponíveis para compra em nossa vinícola, wine shops selecionados e através de nosso site. Entre em contato para pedidos especiais, assinaturas de clube de vinhos ou visitas guiadas com degustação.</p>
+           <a href="./contato.html" class="btn-destaque">Entre em Contato</a>
+       </section>
+   </main>
+   <footer>
+       <div>
+           <a href="https://github.com/orgs/Bielmt09/repositories" target="_blank">github</a>
+       </div>
+       <div>
+           <p>© 2025 Gabriel Amparo - Vinharia Agnello - Todos os direitos reservados</p>
+       </div>
+   </footer>
+
+   <script src="../js/srcipt.js"></script>
+</body>
+</html>
